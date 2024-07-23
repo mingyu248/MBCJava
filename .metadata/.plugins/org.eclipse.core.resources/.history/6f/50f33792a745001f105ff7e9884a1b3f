@@ -1,0 +1,24 @@
+package work;
+
+import java.util.Scanner;
+
+public class Input3 {
+  
+  public static void main(String[] args) {
+    
+    // 국/영/수 점수 입력 : 100 80 90
+    System.out.print("국어/영어/수학 점수 입력 : ");
+    
+    // 스캐너 객체 생성
+    Scanner scanner = new Scanner(System.in);
+    
+    // 
+    String Scores = scanner.nextLine();
+    
+    
+    
+    
+    scanner.close();
+    
+  }
+}

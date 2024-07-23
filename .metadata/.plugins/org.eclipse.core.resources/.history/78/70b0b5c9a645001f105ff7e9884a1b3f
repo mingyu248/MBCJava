@@ -1,0 +1,10 @@
+package work;
+
+public class Input3 {
+  
+  public static void main(String[] args) {
+    
+    System.out.print("국어/영어/수학 점수 입력 : ");
+    
+  }
+}

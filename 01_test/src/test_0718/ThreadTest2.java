@@ -1,0 +1,40 @@
+package test_0718;
+
+import java.util.Scanner;
+
+// 블로킹 상태에서 다른 코드가 계속 실행되는 것을 확인한다
+public class ThreadTest2 {
+  
+  public static void main(String[] args) {
+    
+    Scanner scanner = new Scanner(System.in);
+    
+    // 스레드 실행
+    Thread5 thread5 = new Thread5();
+    thread5.start();
+    
+    // 입력값 출력하는 코드
+    while(true) {
+      String str = scanner.nextLine();          // 블로킹 상태
+      System.out.println("입력된 값 : " + str);
+    }
+  }
+}
+
+// 1초마다 문자 출력
+class Thread5 extends Thread {
+  @Override
+  public void run() {
+    for(int i = 0; i <= 100; i++) {
+      System.out.println("Threa 메소드 실행. ");
+      try {
+        Thread.sleep(1000);
+      } catch (InterruptedException e) {
+        e.printStackTrace();
+      }
+    }
+  }
+}
+
+
+

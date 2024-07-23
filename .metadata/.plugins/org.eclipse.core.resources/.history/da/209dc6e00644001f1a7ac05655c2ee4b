@@ -1,0 +1,11 @@
+package test_0716;
+
+import java.util.Stack;
+
+public class stack {
+  public static void main(String[] args) {
+    
+    // FIFO
+    Stack<String> Stack = new Stack<>();
+  }
+}

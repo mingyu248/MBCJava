@@ -1,0 +1,30 @@
+package test_0716;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
+public class stack2 {
+  public static void main(String[] args) {
+    
+    // 
+    Queue<String> queue = new LinkedList<>();
+    
+    stack.push("1번");
+    stack.push("2번");
+    stack.push("3번");
+    stack.push("4번");
+    stack.push("5번");
+    
+    System.out.println("stack.size() : " + stack.size());
+    System.out.println(stack.pop());
+    System.out.println("stack.size() : " + stack.size());
+    System.out.println(stack.pop());
+    System.out.println();
+    System.out.println();
+    System.out.println();
+    
+    
+    
+  }
+}
