@@ -1,0 +1,34 @@
+package inputoutput;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class InputOutput {
+  
+  public static void main(String[] args) {
+    
+    File file = new File("a.txt");
+    System.out.println("파일 존재 여부 : " + file.exists());
+    System.out.println("파일 경로 : " + file.getAbsolutePath());
+    
+    // 파일이 없거나 깨지는 등의 문제가 많아서 예외처리를 해줘야 한다
+    try {
+      FileInputStream fis = new FileInputStream(file);
+      
+      int ch;
+      
+      // 끝까지 읽은 경우 -1 리턴, 문자를 아스키 코드 char 형태로 내보낸다 -> (char) 캐스팅 하면 문자가 나온다
+      while((ch = fis.read()) != -1) {
+        System.out.println((char)ch);
+      }
+      
+    } catch (FileNotFoundException fnfe) {
+      System.out.println(fnfe.getMessage());
+    } catch (IOException ioe) {
+      System.out.println(ioe.getMessage());
+    }
+    
+  }
+}
