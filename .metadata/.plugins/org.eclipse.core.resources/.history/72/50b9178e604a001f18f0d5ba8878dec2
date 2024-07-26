@@ -1,0 +1,65 @@
+package work;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Input5 {
+  
+  
+  
+  // 과목 입력 함수(메소드)
+  static int inputScore(Scanner sc) {
+    
+    sc = new Scanner(System.in);
+    
+    int score = 0;
+    
+    String msg = "점수는 0 ~ 100 사이의 자연수를 입력하세요";
+    
+    while (true) {    // 무한 반복문
+      
+      // 국/영/수 점수 입력 : 100 80 90
+      System.out.print("점수 입력 : ");
+      
+      try {
+        // 문자열 입력받기
+        score = sc.nextInt();
+        
+        // 조건적 분기
+        // 0 ~ 100 사이의 점수 입력시 분기
+        if (score >= 0 && score <= 100) {
+          break;
+        } else {
+          throw new InputMismatchException();    // 강제 에러 발생 (숫자는 맞지만 0 ~ 100 사이의 자연수가 아닌 경우)
+        }
+        
+      } catch (InputMismatchException e) {
+        
+        System.out.println(msg);
+        sc.nextLine();
+        continue;
+        
+      }
+    }
+    
+    sc.close();
+    
+    return score;
+  }
+  
+  public static void main(String[] args) {
+    
+    Scanner sc = null;
+    
+    int kor = inputScore(sc);
+    int eng = inputScore(sc);
+    int math = inputScore(sc);
+    
+    //sc.close();
+    
+    System.out.println("국어 : " + kor);
+    System.out.println("영어 : " + eng);
+    System.out.println("수학 : " + math);
+    
+  }
+}
