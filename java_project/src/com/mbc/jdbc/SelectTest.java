@@ -12,6 +12,8 @@ public class SelectTest {
     // DB 연결
     Connection conn = DbUtil.connect();
     
+    
+    
     // SQL 문
     String sql = "SELECT * FROM MEMBER_TBL WHERE ID = ?";
     

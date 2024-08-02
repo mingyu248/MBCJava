@@ -8,7 +8,6 @@ import java.sql.Date;
  * @author java
  *
  */
-
 public class MemberVO {
     
     /* 회원 아이디 */
@@ -27,11 +26,9 @@ public class MemberVO {
     private String phone;
     /* 우편번호 */
     private String zip;
-    
     // application.properties 에서 camelCase로 자동변환 해주는 설정이 있다
     /* 도로명 주소 */
     private String roadAddress;     // ROAD_ADDRESS 
-    
     /* 지번 주소 */
     private String jibunAddress;
     /* 상세 주소 */
@@ -40,7 +37,6 @@ public class MemberVO {
     private Date birthday;
     /* 가입일 */
     private Date joindate;
-    
     
     public MemberVO() {}
     public MemberVO(String id, String pw, String name, String gender,
@@ -62,7 +58,6 @@ public class MemberVO {
       this.joindate = joindate;
     }
     
-    
     // toString 오버라이드
     @Override
     public String toString() {
@@ -71,8 +66,6 @@ public class MemberVO {
                 + ", jibunAddress=" + jibunAddress + ", detailAddress=" + detailAddress + ", birthday=" + birthday
                 + ", joindate=" + joindate + "]";
     }
-    
-    
     
     // getter, setter
     public String getId() {
